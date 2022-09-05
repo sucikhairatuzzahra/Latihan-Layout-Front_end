@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Utama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header  -->
+    <header>
+        <div style="background-color: lightgrey ; height:400px ; width: 100%; padding: 20px;">
+
+            <ul class="ul" style="padding-right: 150px; float: right;">
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Kategori</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a class="active" href="">Home</a></li>
+            </ul>
+            <h3 class="textlogo" style="margin-top:5px ;">CAT GALLERY</h3>
+
+            <div class="pages1" style=" width: 950px; height: 250px; margin-left:200px; margin-top: 40px;">
+                <section
+                    style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start; align-content: flex-start;">
+                    <div style="width: 30%; height: 250px; background-color: darkgray;">
+                        <div class="intro"
+                            style="width: 200px; text-align:start ; padding-left: 10px; padding-top: 10px;">
+                            <h1 id="intro">Intro</h1>
+                            <p id="">Cats, also known as domestic cats or house cats, are a type of carnivorous
+                                mammal from the Felidae family. The word "cat" usually refers to a "cat" that has been
+                                tamed, but can also refer to "big cats" such as lions and tigers.
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- slide  -->
+                    <div class="w3-content w3-display-container" style="width:50% ; padding-left: 7px; ">
+
+                        <div class="w3-display-container mySlides">
+                            <img src="asset/img/siberia.jpg" style="width:100%; height: 300px;">
+                            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                                Siberia
+                            </div>
+                        </div>
+
+                        <div class="w3-display-container mySlides">
+                            <img src="asset/img/ragdoll.jpg" style="width:100%; height: 300px;">
+                            <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                                Ragdoll
+                            </div>
+                        </div>
+
+                        <div class="w3-display-container mySlides">
+                            <img src="asset/img/persia.jpg" style="width:100%; height: 300px;">
+                            <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+                                Persia
+                            </div>
+                        </div>
+
+                        <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+                        <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+                    </div>
+                    <!-- end slide  -->
+                </section>
+            </div>
+        </div>
+    </header>
+    <!-- end header  -->
+    <br><br><br>
+
+    <div style="display: flex; margin-bottom: 20px;">
+        <div style="width: 20%"></div>
+        <div style="border-radius: 10px; width: 20% ;height: 200px;margin-right: 10px;background-color: darkgray;">
+            <p id="service">SERVICES</p>
+        </div>
+        <div style="border-radius: 10px; width: 20% ;height: 200px;margin-right: 10px;background-color: darkgray;">
+            <p id="service">SERVICES</p>
+
+        </div>
+        <div style="border-radius: 10px; width: 20% ;height: 200px;background-color: darkgray;">
+            <p id="service">SERVICES</p>
+
+        </div>
+    </div>
+
+    <div style="display: flex;">
+        <div style="width: 20%"></div>
+        <div style="border-radius: 10px;width: 20% ;height: 200px;margin-right: 10px;background-color: lightgray;">
+            <p style="padding: 70px;text-align: center;vertical-align: middle;">RECENT WORK</p>
+
+        </div>
+        <div style="border-radius: 10px;width: 20% ;height: 200px;margin-right: 10px;background-color: lightgray;">
+            <p style="padding: 70px;text-align: center;vertical-align: middle;">RECENT WORK</p>
+
+        </div>
+        <div style="border-radius: 10px;width: 20% ;height: 200px;background-color: lightgray;">
+            <p style="padding: 70px;text-align: center;vertical-align: middle;">RECENT WORK</p>
+
+        </div>
+    </div>
+
+    <br><br><br>
+    <center>
+        <div style="background-color: lightblue ; margin:5px ; height:83px ; width: 1000px;">
+            <p style="text-align:center ; padding-top:30px ;"><b> Feed Twitter</b></p>
+
+        </div>
+    </center>
+    <br><br>
+    <div style="background-color: lightgrey ; margin:5px ; height:83px ; width: 100%;">
+        <ul class="ul" style=" float: left;">
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Kategori</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a class="active" href="">Home</a></li>
+        </ul>
+        <p style="text-align: end ; padding-top: 50px ;"><i> copyright info @ 2022</i></p>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
